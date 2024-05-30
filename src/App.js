@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from './components/navBar';
 import AboutUs from './components/aboutUs';
 import Home from './components/form';
+import Welcome from './components/welcome';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -13,6 +14,7 @@ function App() {
             <>
                 <NavBar />
                 <Routes>
+                <Route path="/" element={<Welcome />} /> {/* Default route */}
                 <Route path="/home" element={<Home />} />
                     <Route path="/about" element={<AboutUs />} />
                     

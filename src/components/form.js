@@ -55,10 +55,15 @@ const Form = () => {
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
+        {todoList.length > 0 && (
+          <div className="mt-5">
+            <h3>Todo List</h3>
         <ul className="mt-5 list-group">
           {todoList.map((todo, index) => (
-            <li key={index} className="list-group-item">
+            <li key={index} className="list-group-item mb-5">
+             
               <div>
+              
               <h5>{index + 1}. {todo.item}</h5>              
               <p>{todo.description}</p>
               </div>
@@ -67,7 +72,9 @@ const Form = () => {
           ))}
         </ul>
       </div>
+      )}
     </div>
+  </div>
   </div>
   );
 }
